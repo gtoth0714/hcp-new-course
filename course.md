@@ -4,7 +4,7 @@ module_id: hip_explorer
 author:   Helvetia Academy
 version:  1.0.0
 language: DE
-mode: Textbook
+mode: Document
 icon: helvetia_logo.svg
 link: helvetia.css
 comment: Einführungskurs zur Helvetia Integration Platform (HIP).

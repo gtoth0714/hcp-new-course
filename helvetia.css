@@ -24,12 +24,17 @@
     --color-border: var(--lia-grey-light);
     --color-highlight-dark: var(--lia-turquoise-dark);
     --color-highlight-menu: var(--lia-turquoise);
-    --color-highlight: var(--lia-turquoise);
+    --color-highlight: var(--lia-red-darker);
     --color-text: var(--lia-anthracite)
 }
 
 body {
-    font-family: Futura;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.parallax {
+    transform: translateY(0);
+    transition: transform 0.2s ease-out;
 }
 
 .h1,
@@ -39,10 +44,70 @@ body {
     font-family: Futura;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;   /* maximum szélesség, hogy ne nőjön végtelenre */
+  margin: 0 auto;     /* középre igazítás */
+  aspect-ratio: 16 / 9; /* megtartja a 16:9 arányt */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.felsorolas {
+  padding-left: 30px;
+}
+
+.my-title1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .my-title2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }  
+
 button,
 .lia-pagination__content {
     border-radius: 0 !important;
 }
+
+.lia-toc {
+    background-color: rgb(var(--lia-grey-lighter));
+    font-size: smaller;
+    padding: 10px;
+    list-style: none;
+}
+
+.lia-toc li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+}
+
+.lia-toc li input[type="checkbox"] {
+  display: none;
+}
+
+.lia-toc li input[type="checkbox"]:checked + a::before {
+  content: "✔";
+  color: green;
+  position: absolute;
+  left: 0;
+}
+
 
 .lia-btn--outline {
     border-width: 0 0 3px !important;
@@ -86,8 +151,6 @@ button,
     color: rgb(var(--color-background)) !important;
 }
 
-.is-failure {}
-
 is-success .lia-checkbox[type=checkbox].is-failure:checked {
     background-color: rgb(var(--lia-red)) !important;
 }
@@ -117,10 +180,10 @@ is-success .lia-checkbox[type=checkbox].is-failure:checked {
 /* Container for multiple cards */
 .cards-container {
     display: flex;
-    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 2rem 0;
+    gap: 0;
+    padding: 0;
 }
 
 .card {
@@ -171,7 +234,7 @@ is-success .lia-checkbox[type=checkbox].is-failure:checked {
 }
 
 /* Responsive design for smaller screens */
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
     .cards-container {
         flex-direction: column;
         align-items: center;
@@ -181,3 +244,341 @@ is-success .lia-checkbox[type=checkbox].is-failure:checked {
 .card-content>span {
     display: contents;
 }
+
+.GoodRead {
+  background-color: rgba(255, 98, 98, 0.449);
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid red;
+}
+
+/* --- Tab container --- */
+.tab-container {
+    width: 100%;
+    border: 1px solid #000000;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* --- Tab gombok --- */
+  .tab-buttons {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 8px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    cursor: pointer;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+  
+  .tab-btn:hover {
+    background: white;
+    color: red;
+  }
+  
+  /* --- Rádiógombok elrejtése --- */
+  .tab-container input[type="radio"] {
+    display: none;
+  }
+  
+  /* --- Alapértelmezett panelek elrejtése --- */
+  .tab-content .panel {
+    display: none;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* --- Az aktív panel megjelenítése rádiógomb alapján --- */
+  #tab1:checked ~ .tab-buttons + .tab-content .panel1,
+  #tab2:checked ~ .tab-buttons + .tab-content .panel2,
+  #tab3:checked ~ .tab-buttons + .tab-content .panel3 {
+    display: block;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  /* --- Címek stílusa --- */
+  .my-title2 {
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .Achim-container {
+    display: inline-flex;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 40px;
+    gap: 20px;
+  }
+
+  .Achim-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Hotspot pozíció */
+.hotspot {
+  position: absolute;
+}
+
+/* Checkbox rejtve */
+.hotspot input {
+  display: none;
+}
+
+/* Gomb stílusa */
+.hotspot-btn {
+  background: white;
+  color: rgb(186, 0, 0);
+  border: 0.5px solid rgb(226, 226, 226);
+  border-radius: 50%;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  z-index: 20;
+  position: relative;
+  font-size: 12px;
+}
+
+/* Popup alapértelmezésben rejtve */
+.hotspot .popup {
+  display: none;
+  position: absolute;
+  top: 40px; /* gomb alatt */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255);
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  width: 300px;
+  z-index: 30;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Checkbox segítségével mutatjuk a popupot */
+.hotspot input:checked ~ .popup {
+  display: block;
+}
+
+/* Popup tartalom */
+.hotspot .popup .my-title2 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Audió stílus */
+.hotspot .popup audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Link a popupban */
+.hotspot .popup a {
+  display: inline-block;
+  margin-top: 5px;
+  color: #007480;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hotspot .popup a:hover {
+  text-decoration: underline;
+}
+.hotspot-btn:hover,
+.hotspot input:checked + .hotspot-btn {
+  background: rgb(186, 0, 0);
+  color: white;
+  border: 1px solid white;
+}
+.popup-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.nav-btn {
+  background: rgb(186, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-btn:hover {
+  background: #a00000;
+}
+
+.circle-list {
+  counter-reset: my-counter; /* számláló inicializálása */
+  list-style: none;          /* alap listajelek eltüntetése */
+  padding-left: 0;
+}
+
+.circle-list li {
+  counter-increment: my-counter; /* számláló növelése */
+  position: relative;
+  padding-left: 40px;           /* hely a körnek */
+  margin-bottom: 15px;
+}
+
+/* A szám körként való megjelenítése */
+.circle-list li::before {
+  content: counter(my-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;          /* kör átmérője */
+  height: 30px;
+  border-radius: 50%;   /* kör */
+  background: rgb(186, 0, 0);
+  color: white;
+  text-align: center;
+  line-height: 30px;    /* függőleges középre */
+  font-family: sans-serif;
+}
+.Philipp-container {
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.Philipp-content {
+  font-size: 18px;
+}
+.Philipp-name {
+  font-size: 12px;
+  color: rgb(186, 0, 0);
+  padding: 10px;
+}
+.Expose {
+  color: rgb(186, 0, 0);
+}
+
+.accordion details {
+  border: 1px solid rgb(var(--lia-grey-light));
+  margin: 0;
+  padding: 15px;
+  background: rgb(var(--lia-white));
+  cursor: pointer;
+}
+
+.accordion summary {
+  font-weight: bold;
+  list-style: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none; /* kis háromszög eltüntetése */
+}
+
+.accordion .content {
+  padding: 20px;
+  background: rgb(var(--lia-white));
+}
+.full-width-section {
+  position: relative;
+  left: 0;
+  background-color: rgb(var(--lia-grey-lighter));
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); 
+}
+.full-width-section .DO-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.DO-base {
+  color: black;
+}
+.DO-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  border: 1px solid rgb(var(--lia-grey-light));
+  text-align: left;
+}
+.DO-table th {
+  border: 1px solid rgb(var(--lia-grey-light));
+  background-color: grey;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.DO-table td {
+  border: 1px solid rgb(var(--lia-grey-light));
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.do-label {
+  background-color: rgb(0, 184, 0); /* zöld */
+  color: white; /* fehér szöveg */
+  font-weight: bold;
+}
+.must-not-label {
+  background-color: rgb(var(--lia-red));
+  color: white; /* fehér szöveg */
+  font-weight: bold;
+}
+  
+  /* --- Egyszerű fadeIn animáció --- */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+/* Alap fade-in stílus minden elemre, ami blokkszintű */
+p, h1, h2, h3, h4, h5, h6, img, iframe, blockquote, li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.2s; /* minden elemnél ugyanaz, ha akarod, csökkenthető */
+  }
+  
+  /* Kulcs-animáció */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Optional: sima scroll a TOC linkeknek */
+  html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+  }

@@ -1,0 +1,93 @@
+/* Alap fade-in stílus minden elemre, ami blokkszintű */
+p, h1, h2, h3, h4, h5, h6, img, iframe, blockquote, li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.2s; /* minden elemnél ugyanaz, ha akarod, csökkenthető */
+  }
+  
+  /* Kulcs-animáció */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Optional: sima scroll a TOC linkeknek */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Styling a részleteknek */
+  details {
+    margin: 1em 0;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .tab-container {
+    width: 100%;
+    margin: 0;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    user-select: none;
+    background: #eee;
+    font-weight: bold;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  .tab-btn:first-of-type {
+    border-left: none;
+  }
+  
+  input[name="tabs"] {
+    display: none;
+  }
+  
+  input#tab1:checked ~ .tab-contents #content1,
+  input#tab2:checked ~ .tab-contents #content2,
+  input#tab3:checked ~ .tab-contents #content3 {
+    display: block;
+  }
+  
+  .tab-content {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #000;
+    box-sizing: border-box;
+  }
+  
+  /* Aktív tab stílus */
+  input#tab1:checked + label[for="tab1"],
+  input#tab2:checked + label[for="tab2"],
+  input#tab3:checked + label[for="tab3"] {
+    background: #000;
+    color: red;
+  }
+  
+  
