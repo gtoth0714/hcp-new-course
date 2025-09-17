@@ -35,7 +35,9 @@ sharing: false
 This introduction video summarizes the fundamental concepts behind Helvetia Integration Platform (HIP).  
 The video outlines the idea behind the HIP Academy Learning Paths and how you, as a learner, can further progress your journey.
 
-[Open the video on new page](https://api.eu.kaltura.com/p/119/sp/11900/embedIframeJs/uiconf_id/23449901/partner_id/119?iframeembed=true&playerId=kaltura_player&entry_id=0_f01ckyds)
+<div class="video-container">
+  [Open the video on new page](https://api.eu.kaltura.com/p/119/sp/11900/embedIframeJs/uiconf_id/23449901/partner_id/119?iframeembed=true&playerId=kaltura_player&entry_id=0_f01ckyds)
+</div>
 
 # Why is the Helvetia Integration Platform needed?
 

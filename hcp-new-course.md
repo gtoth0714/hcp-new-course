@@ -7,8 +7,9 @@ courseId: SnwEb9zji8P0azXWalkZoW8sSN1n2VEq
 version:  1.0.0
 language: DE
 mode: continuous
+icon: Left_upper_corner.jpg
 toc: left
-icon: helvetia_logo.svg
+toc: false
 link: helvetia.css
 comment: Einführungskurs zur Helvetia Integration Platform (HIP).
 estimated_time_in_minutes: 120
@@ -29,6 +30,14 @@ sharing: false
 </div>
 @end
 -->
+
+<!-- EGYEDI BAL OLDALI TOC -->
+<div class="custom-toc">
+  <div class="toc-item"><a href="#section1">1. Introduction</a></div>
+  <div class="toc-item"><a href="#section2">2. Market Overview</a></div>
+  <div class="toc-item"><a href="#section3">3. Technology Drivers</a></div>
+</div>
+
 
 
 # Introduction
@@ -76,51 +85,57 @@ Helvetia Integration Platform is a cornerstone technology within the Helvetia se
 The requirements are derived from market and technology drivers, the business units and IT's own requirements.
 
 
-<div class="tab-container">
+<div class="tab-wrapper">
 
-  <input type="radio" name="tabs" id="tab1" checked>
-  <input type="radio" name="tabs" id="tab2">
-  <input type="radio" name="tabs" id="tab3">
+  <input type="radio" name="tabs" id="tab1" checked hidden>
+  <input type="radio" name="tabs" id="tab2" hidden>
+  <input type="radio" name="tabs" id="tab3" hidden>
 
-  <div class="tab-buttons"><label for="tab1" class="tab-btn">Market and technology drivers</label><label for="tab2" class="tab-btn">Business requirements</label><label for="tab3" class="tab-btn">IT's Intrinsic Claim</label></div>
+  <div class="tab-container">
 
-  <div class="tab-content">
-    <div class="panel panel1">
-      <div class="my-title2">Market situation</div>
-      The insurance market is in a state of flux, both in Switzerland and in Europe. Our segments are subject to increasing substitutability compared with the market as a whole.
-      <div class="my-title2">Technologies</div>
-      New technologies and trends such as analytics, artificial intelligence or cloud computing offer great potential and are becoming the new industry standard.<br>
-      <img src="MarketTechnology.png" alt="MarketTechnology" style="max-width:100%;">  
+    <div class="tab-buttons">
+      <label for="tab1">MARKET AND TECHNOLOGY DRIVERS</label>
+      <label for="tab2">BUSINESS REQUIREMENTS</label>
+      <label for="tab3">IT'S INTRINSIC CLAIM</label>
     </div>
-    <div class="panel panel2">
-      <div class="my-title2">Customers and Partners</div>
-      Customers' expectations are constantly changing. So are their demands on digital offerings and interactions.
-      <div class="my-title2">Business Units and Country Markets</div>
-      The business units are consistently aligning themselves with the new market and customer requirements (e.g. convenience, omnichannel capability). Cost pressure is increasing. Current IT services must be reviewed for relevance and cost.<br>
-      <img src="BusinessReq.png" alt="MarketTechnology" style="max-width:100%;">  
-    </div>
-    <div class="panel panel3">
-      <div class="my-title2">Strengthening the Foundations</div>
-      IT identifies technological dependencies, reduces complexity, optimizes the use of resources and defines the strategic investment priorities together with the business.
-      <div class="my-title2">Increasing Future Viability</div>
-      IT brings innovative and secure solutions to Helvetia that enable technology-based differentiation in the market and inspire customers and partners.<br>
-      <img src="ITs.png" alt="MarketTechnology" style="max-width:100%;">  
+
+    <div class="tab-contents">
+      <div class="tab-content" id="content1">
+        <div class="my-title2">Market situation</div>
+        The insurance market is in a state of flux, both in Switzerland and in Europe. Our segments are subject to increasing substitutability compared with the market as a whole.
+        <div class="my-title2">Technologies</div>
+        New technologies and trends such as analytics, artificial intelligence or cloud computing offer great potential and are becoming the new industry standard.<br>
+        <img src="MarketTechnology.jpg" alt="MarketTechnology" style="width:100vw; display:block;">  
+      </div>
+      <div class="tab-content" id="content2">
+        <div class="my-title2">Customers and Partners</div>
+        Customers' expectations are constantly changing. So are their demands on digital offerings and interactions.
+        <div class="my-title2">Business Units and Country Markets</div>
+        The business units are consistently aligning themselves with the new market and customer requirements (e.g. convenience, omnichannel capability). Cost pressure is increasing. Current IT services must be reviewed for relevance and cost.<br>
+        <img src="BusinessReq.jpg" alt="BusinessReq" style="width:100vw; display:block;">  
+      </div>
+      <div class="tab-content" id="content3">
+        <div class="my-title2">Strengthening the Foundations</div>
+        IT identifies technological dependencies, reduces complexity, optimizes the use of resources and defines the strategic investment priorities together with the business.
+        <div class="my-title2">Increasing Future Viability</div>
+        IT brings innovative and secure solutions to Helvetia that enable technology-based differentiation in the market and inspire customers and partners.<br>
+        <img src="ITs.jpg" alt="ITs" style="width:100vw; display: block">  
+      </div>
     </div>
 
   </div>
-
 </div>
-
 <br><br>
-<div class="Achim-container">
-  <div class="Achim-head">
-    <img src="Achim.png" alt="Achim" style="width:300px;">
-  </div>
-  <div class="Achim">
-  "Our ambition is to be the driver of Helvetia’s digital transformation through customer-centric, innovative and cost-efficient IT services, along with new strategic thrusts:<br><br>
-  Specifically, we are focusing on better orchestrating our service delivery, strengthening our integration and partnership capabilities, our front-end differentiation potential, expanding our analytics capabilities, optimizing IT processes, security, IT innovation management, and increasing our employer attractiveness."<br><br>
 
-  *Achim Baumstark - CTO*
+<div class="full-width-section">
+  <div class="Achim-container">
+    <div class="content-flex">
+      <div class="Achim-head"><img src="Achim.png" alt="Achim"></div>
+      <div class="Achim">"Our ambition is to be the driver of Helvetia’s digital transformation through customer-centric, innovative and cost-efficient IT services, along with new strategic thrusts:<br><br>
+      Specifically, we are focusing on better orchestrating our service delivery, strengthening our integration and partnership capabilities, our front-end differentiation potential, expanding our analytics capabilities, optimizing IT processes, security, IT innovation management, and increasing our employer attractiveness."<br><br>
+
+      *Achim Baumstark - CTO*</div>
+    </div>
   </div>
 </div>
 <br><br>
@@ -191,46 +206,51 @@ Event-driven processing and streaming becomes the key concept in the enterprise 
   [Software Architecture Patterns Report](https://learning.oreilly.com/library/view/software-architecture-patterns/9781491971437/)<br>
   Dive into common software architecture patterns. Where each pattern is explained on how it works, its benefits, and circumstances it is useful. An analysis and scorecard for each pattern based on several architecture and software development quality attributes helps to keep a high-level overview.
 </div>
-
-<div class="my-title2">Interactive Paradigm Shift</div>
+<br><br>
 
 <div class="image-container">
   <img src="Screenshot-2022-05-10-104341.png" alt="Demo Image" style="width:100%;">
 
-  <div class="hotspot" style="top: 40%; left: 23%;">
+  <input type="radio" name="hotspot" id="toggle0" checked hidden>
+
+  <div class="hotspot" style="top: 41%; left: 23.5%;">
     <input type="radio" name="hotspot" id="toggle1">
     <label for="toggle1" class="hotspot-btn">1</label>
     <div class="popup">
-    <div class="popup-nav">
-      <label for="toggle2" class="nav-btn next">→</label>
-      <label for="toggle0" class="close-btn">✖</label>
-    </div>
-      <div class="my-title2">Paradigm Shift</div>
+      <div class="popup-header">
+        <div class="my-title2">Paradigm Shift</div>
+        <div class="popup-nav">
+          <label for="toggle2" class="nav-btn next">></label>
+          <label for="toggle0" class="close-btn">x</label>
+        </div>
+      </div>
       <audio controls style="width: 100%; max-width: 400px;">
         <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/I7fJAMAP-nN-YvB2-recording.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
-      <div>
+      <div class="popup-body">
         So when we started thinking about HIP, all these drivers were already in place and we had already shown that we can achieve a paradigm shift with respect to Application Architecture and it was very successful. And we wanted to take those elements and also apply it to Integration to achieve a similar Paradigm Shift.
       </div>
     </div>
   </div>
 
-  <div class="hotspot" style="top: 69%; left: 21%;">
+  <div class="hotspot" style="top: 71%; left: 23%;">
     <input type="radio" name="hotspot" id="toggle2">
     <label for="toggle2" class="hotspot-btn">2</label>
     <div class="popup">
-    <div class="popup-nav">
-      <label for="toggle1" class="nav-btn prev">←</label>
-      <label for="toggle3" class="nav-btn next">→</label>
-      <label for="toggle0" class="close-btn">✖</label>
-    </div>
-      <div class="my-title2">Industry Trends</div>
+      <div class="popup-header">
+        <div class="my-title2">Industry Trends</div>
+        <div class="popup-nav">
+          <label for="toggle1" class="nav-btn prev"><</label>
+          <label for="toggle3" class="nav-btn next">></label>
+          <label for="toggle0" class="close-btn">x</label>
+        </div>
+      </div>
       <audio controls style="width: 100%; max-width: 400px;">
         <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/35y_qluO6Cx4ChkU-recording.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
-      <div>
+      <div class="popup-body">
         And then we looked at the industry. Mega Trends like Cloud Native with Docker and Container Management Platform Software. Automation with Infrastructure as Code, declarative Configuration, GitOps and so on. The keyword Agility shows that these enablers are not restricted to tools, but extend to processes, as well, e.g. Scrum.
         So these enablers would help us to achieve this Paradigm Shift with how we envisioned Modern Integration.
       </div>
@@ -238,26 +258,30 @@ Event-driven processing and streaming becomes the key concept in the enterprise 
   </div>
 
 
-  <div class="hotspot" style="top: 69%; left: 46%;">
+  <div class="hotspot" style="top: 70%; left: 46%;">
     <input type="radio" name="hotspot" id="toggle3">
     <label for="toggle3" class="hotspot-btn">3</label>
     <div class="popup">
-    <div class="popup-nav">
-      <label for="toggle2" class="nav-btn prev">←</label>
-      <label for="toggle0" class="close-btn">✖</label>
-    </div>
-      <div class="my-title2">Helvetia Drivers</div>
+      <div class="popup-header">
+        <div class="my-title2">Helvetia Drivers</div>
+        <div class="popup-nav">
+          <label for="toggle2" class="nav-btn prev"><</label>
+          <label for="toggle0" class="close-btn">x</label>
+        </div>
+      </div>
       <audio controls style="width: 100%; max-width: 400px;">
         <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/Nst9z92eZOLvl7In-recording.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
-      <div>
+      <div class="popup-body">
         This slide is from a Slide Deck called Target Vision Modern Integration that we compiled in early 2020 when we started thinking how we would design the new Helvetia Integration Platform. The strategic drivers were there. Cloud first: focus our efforts on the cloud, because that's where most of our users were going to be. API first: Focus on APIs, allowing software components to interact easily. AI first and Omnichannel, meaning that we wanted good quality data, in real-time; both for analytics and operational use.
         And then Culture. We were already switching to DevOps in the organization. We were putting a focus on the Customer and the user Experience. We wanted to be faster on the market with simpler solutions.
       </div>
     </div>
   </div>
 </div>
+
+
 
 
 <div class="cards-container">
@@ -326,11 +350,19 @@ Helvetia Integration Platform (HIP) is the Strategic Platform for cross-domain I
 <div class="image-container">
   <img src="HIP.jpg" alt="Demo Image" style="width:100%;">
 
+  <input type="radio" name="hotspot2" id="toggle0b" checked hidden>
+
   <div class="hotspot" style="top: 0%; left: 20%;">
-    <input type="checkbox" id="toggle4">
+    <input type="radio" name="hotspot2" id="toggle4">
     <label for="toggle4" class="hotspot-btn">1</label>
     <div class="popup">
-      <div class="my-title2">Domain-Driver Approach</div>
+      <div class="popup-header">
+        <div class="my-title2">Domain-Driver Approach</div>
+        <div class="popup-nav">
+          <label for="toggle5" class="nav-btn next">></label>
+          <label for="toggle0b" class="close-btn">x</label>
+        </div>
+      </div>
       <audio controls style="width: 100%; max-width: 400px;">
         <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/I7fJAMAP-nN-YvB2-recording.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -338,11 +370,18 @@ Helvetia Integration Platform (HIP) is the Strategic Platform for cross-domain I
     </div>
   </div>
 
-  <div class="hotspot" style="top: 15%; left: 22%;">
-    <input type="checkbox" id="toggle5">
+  <div class="hotspot" style="top: 15%; left: 23%;">
+    <input type="radio" name="hotspot2" id="toggle5">
     <label for="toggle5" class="hotspot-btn">2</label>
     <div class="popup">
-      <div class="my-title2">Integration Patterns</div>
+      <div class="popup-header">
+        <div class="my-title2">Integration Patterns</div>
+        <div class="popup-nav">
+          <label for="toggle4" class="nav-btn prev"><</label>
+          <label for="toggle6" class="nav-btn next">></label>
+          <label for="toggle0b" class="close-btn">x</label>
+        </div>
+      </div>
       <audio controls style="width: 100%; max-width: 400px;">
         <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/35y_qluO6Cx4ChkU-recording.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -351,10 +390,17 @@ Helvetia Integration Platform (HIP) is the Strategic Platform for cross-domain I
   </div>
 
   <div class="hotspot" style="top: 15%; left: 54%;">
-    <input type="checkbox" id="toggle6">
+    <input type="radio" name="hotspot2" id="toggle6">
     <label for="toggle6" class="hotspot-btn">3</label>
     <div class="popup">
-      <div class="my-title2">HIP</div>
+      <div class="popup-header">
+        <div class="my-title2">HIP</div>
+        <div class="popup-nav">
+          <label for="toggle5" class="nav-btn prev"><</label>
+          <label for="toggle7" class="nav-btn next">></label>
+          <label for="toggle0b" class="close-btn">x</label>
+        </div>
+      </div>
       <audio controls style="width: 100%; max-width: 400px;">
         <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/Nst9z92eZOLvl7In-recording.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -362,11 +408,17 @@ Helvetia Integration Platform (HIP) is the Strategic Platform for cross-domain I
     </div>
   </div>
 
-  <div class="hotspot" style="top: 65%; left: 52%;">
-    <input type="checkbox" id="toggle7">
+  <div class="hotspot" style="top: 64%; left: 53%;">
+    <input type="radio" name="hotspot2" id="toggle7">
     <label for="toggle7" class="hotspot-btn">4</label>
     <div class="popup">
-      <div class="my-title2">API Catalog & Self-Service</div>
+      <div class="popup-header">
+        <div class="my-title2">API Catalog & Self-Service</div>
+        <div class="popup-nav">
+          <label for="toggle6" class="nav-btn prev"><</label>
+          <label for="toggle0b" class="close-btn">x</label>
+        </div>
+      </div>
       <audio controls style="width: 100%; max-width: 400px;">
         <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/Nst9z92eZOLvl7In-recording.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -374,7 +426,6 @@ Helvetia Integration Platform (HIP) is the Strategic Platform for cross-domain I
     </div>
   </div>
 </div>
-
 
 
 
@@ -419,34 +470,64 @@ The Helvetia Integration Platform (HIP) enables teams to connect applications an
 <div class="image-container">
   <img src="Integration-Patterns.png" alt="Demo Image" style="width:100%;">
 
+  <input type="radio" name="hotspotIP" id="toggle0c" checked hidden>
+
   <div class="hotspot" style="top: 0%; left: 40%;">
-    <input type="checkbox" id="toggle8">
+    <input type="radio" name="hotspotIP" id="toggle8">
     <label for="toggle8" class="hotspot-btn">1</label>
     <div class="popup">
-      <div class="my-title2">Integration Patterns</div>
-      [🎧 Play recording](https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/omiORb67D0cN-0ud-recording.mp3)
+      <div class="popup-header">
+        <div class="my-title2">Integration Patterns</div>
+        <div class="popup-nav">
+          <label for="toggle9" class="nav-btn next">></label>
+          <label for="toggle0c" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/omiORb67D0cN-0ud-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 
-  <div class="hotspot" style="top: 95%; left: 45%;">
-    <input type="checkbox" id="toggle9">
+  <div class="hotspot" style="top: 88%; left: 45%;">
+    <input type="radio" name="hotspotIP" id="toggle9">
     <label for="toggle9" class="hotspot-btn">2</label>
     <div class="popup">
-      <div class="my-title2">Change Data Capture</div>
-      [🎧 Play recording](https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/oSvhDKisKNv7RQbm-recording.mp3)
+      <div class="popup-header">
+        <div class="my-title2">Change Data Capture</div>
+        <div class="popup-nav">
+          <label for="toggle8" class="nav-btn prev"><</label>
+          <label for="toggle10" class="nav-btn next">></label>
+          <label for="toggle0c" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/oSvhDKisKNv7RQbm-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 
   <div class="hotspot" style="top: 25%; left: 63%;">
-    <input type="checkbox" id="toggle10">
+    <input type="radio" name="hotspotIP" id="toggle10">
     <label for="toggle10" class="hotspot-btn">3</label>
     <div class="popup">
-      <div class="my-title2">Priorization</div>
-      [🎧 Play recording](https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/Pre73Pk_2dCdHLhT-recording.mp3)
+      <div class="popup-header">
+        <div class="my-title2">Priorization</div>
+        <div class="popup-nav">
+          <label for="toggle9" class="nav-btn prev"><</label>
+          <label for="toggle8" class="nav-btn next">></label>
+          <label for="toggle0c" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/Pre73Pk_2dCdHLhT-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 </div>
-
 
 
 
@@ -470,8 +551,10 @@ In the next chapter we are going to look on how HIP works on a more technical le
 
 <div class="my-title2">References</div><br><br>
 
-
-[Target Vision Integration.pdf](#) *(PDF, 1.4 MB)
+<div class="TargetVision">
+  <b>[Target Vision Integration.pdf](#)</b><br>
+  1.4MB
+</div><br><br>
 
 # How does the Helvetia Integration Platform work?
 
@@ -505,27 +588,27 @@ The Helvetia Integration Platform (HIP) enables teams to connect applications an
 <div class="image-container">
   <img src="hip_component-overviews_how-does-hip-work.png" alt="Demo Image" style="width:100%;">
 
-  <div class="hotspot" style="top: 0%; left: 30%;">
+  <div class="hotspot" style="top: 15%; left: 15%;">
     <input type="checkbox" id="toggle11">
-    <label for="toggle11" class="hotspot-btn">1</label>
+    <label for="toggle11" class="hotspot-btn">+</label>
     <div class="popup">
       <div class="my-title2">API Catalog: reuse existing interfaces</div>
         The API Catalog is a central element in our API landscape. The catalog is a directory that provides an overview of all available API types. Metadata and metrics provide information about each API available. Search and filter functions make sure that relevant APIs can be found easily and quickly. Every API and integration created with HIP increases the value of the application network and helps to make Helvetia a more agile and innovative organization!
     </div>
   </div>
 
-  <div class="hotspot" style="top: 95%; left: 25%;">
+  <div class="hotspot" style="top: 82%; left: 14%;">
     <input type="checkbox" id="toggle12">
-    <label for="toggle12" class="hotspot-btn">2</label>
+    <label for="toggle12" class="hotspot-btn">+</label>
     <div class="popup">
       <div class="my-title2">Security</div>
         Layers of security are applied by default to protect your API. Control access and traffic to your API over OpenID Connect (OIDC) with ease.
     </div>
   </div>
 
-  <div class="hotspot" style="top: 75%; left: 50%;">
+  <div class="hotspot" style="top: 63%; left: 38%;">
     <input type="checkbox" id="toggle12">
-    <label for="toggle12" class="hotspot-btn">3</label>
+    <label for="toggle12" class="hotspot-btn">+</label>
     <div class="popup">
       <div class="my-title2">Automation: self-service capabilities of HIP</div>
         HIP provides self-service capabilities that enable DevOps teams to publish or consume APIs according their needs. This reduces organizational dependencies and accelerates the provision of APIs through automation.  
@@ -537,9 +620,9 @@ The Helvetia Integration Platform (HIP) enables teams to connect applications an
     </div>
   </div>
 
-  <div class="hotspot" style="top: 50%; left: 70%;">
+  <div class="hotspot" style="top: 50%; left: 60%;">
     <input type="checkbox" id="toggle13">
-    <label for="toggle13" class="hotspot-btn">4</label>
+    <label for="toggle13" class="hotspot-btn">+</label>
     <div class="popup">
       <div class="my-title2">Integration Flows</div>
         Integration Flows are used to integrate all kinds of systems and data formats with each other. The above overview provides a high-level view of how different systems can be integrated.
@@ -552,9 +635,9 @@ The Helvetia Integration Platform (HIP) enables teams to connect applications an
     </div>
   </div>
 
-  <div class="hotspot" style="top: 95%; left: 60%;">
+  <div class="hotspot" style="top: 83%; left: 80%;">
     <input type="checkbox" id="toggle14">
-    <label for="toggle14" class="hotspot-btn">5</label>
+    <label for="toggle14" class="hotspot-btn">+</label>
     <div class="popup">
       <div class="my-title2">Monitoring & Logging</div>
         End-to-end monitoring and logging dashboards are provided and can be customized to your personal needs.
@@ -587,33 +670,65 @@ Outbound interfaces are connections from Helvetia systems via the Internet to ex
 <div class="image-container">
   <img src="hip_component-overviews_api-catalog.jpg" alt="Demo Image" style="width:100%;">
 
-  <div class="hotspot" style="top: 0%; left: 30%;">
-    <input type="checkbox" id="toggle15">
-    <label for="toggle15" class="hotspot-btn">1</label>
+  <input type="radio" name="hotspotAPI" id="toggle0d" checked hidden>
+
+  <div class="hotspot" style="top: 32%; left: 48%;">
+    <input type="radio" name="hotspotAPI" id="toggle15">
+    <label for="toggle15" class="hotspot-btn">+</label>
     <div class="popup">
-      <div class="my-title2">**API Catalog** </div>
-        [Listen audio](https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/MWs0-twX7kk7KdSc-recording.mp3)
+      <div class="popup-header">
+        <div class="my-title2">API Catalog</div>
+        <div class="popup-nav">
+          <label for="toggle16" class="nav-btn next">></label>
+          <label for="toggle0d" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/MWs0-twX7kk7KdSc-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 
-  <div class="hotspot" style="top: 95%; left: 25%;">
-    <input type="checkbox" id="toggle16">
-    <label for="toggle16" class="hotspot-btn">2</label>
+  <div class="hotspot" style="top: 80%; left: 15%;">
+    <input type="radio" name="hotspotAPI" id="toggle16">
+    <label for="toggle16" class="hotspot-btn">+</label>
     <div class="popup">
-      <div class="my-title2">**HIP Self-Service** </div>
-       [Listen audio](https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/6FLj93K1QzE6Vn6m-recording.mp3)
+      <div class="popup-header">
+        <div class="my-title2">HIP Self-Service</div>
+        <div class="popup-nav">
+          <label for="toggle15" class="nav-btn prev"><</label>
+          <label for="toggle17" class="nav-btn next">></label>
+          <label for="toggle0d" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/6FLj93K1QzE6Vn6m-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 
-  <div class="hotspot" style="top: 75%; left: 50%;">
-    <input type="checkbox" id="toggle17">
-    <label for="toggle17" class="hotspot-btn">3</label>
+  <div class="hotspot" style="top: 45%; left: 70%;">
+    <input type="radio" name="hotspotAPI" id="toggle17">
+    <label for="toggle17" class="hotspot-btn">+</label>
     <div class="popup">
-      <div class="my-title2">**Third Party Integrations**</div>
-        [Listen audio](https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/85GTHQHYmm2QxinM-recording.mp3)
+      <div class="popup-header">
+        <div class="my-title2">Third Party Integrations</div>
+        <div class="popup-nav">
+          <label for="toggle16" class="nav-btn prev"><</label>
+          <label for="toggle15" class="nav-btn next">></label>
+          <label for="toggle0d" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/85GTHQHYmm2QxinM-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 </div>
+
 
 ---
 
@@ -669,24 +784,45 @@ The following list gives an orientation for which purposes Kafka should be used 
 <div class="image-container">
   <img src="hip_component-overviews_kafka-self-service.png" alt="Demo Image" style="width:100%;">
 
-  <div class="hotspot" style="top: 0%; left: 30%;">
-    <input type="checkbox" id="toggle18">
+  <input type="radio" name="hotspotKafka" id="toggle0e" checked hidden>
+
+  <div class="hotspot" style="top: 50%; left: 42%;">
+    <input type="radio" name="hotspotKafka" id="toggle18">
     <label for="toggle18" class="hotspot-btn">1</label>
     <div class="popup">
-      <div class="my-title2">*Kafka Self-Service*:</div>
-        [audio link](https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/UX-u4Y5IbPnhyQfu-recording.mp3)
+      <div class="popup-header">
+        <div class="my-title2">Kafka Self-Service</div>
+        <div class="popup-nav">
+          <label for="toggle19" class="nav-btn next">></label>
+          <label for="toggle0e" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/UX-u4Y5IbPnhyQfu-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 
-  <div class="hotspot" style="top: 95%; left: 25%;">
-    <input type="checkbox" id="toggle19">
+  <div class="hotspot" style="top: 10%; left: 12%;">
+    <input type="radio" name="hotspotKafka" id="toggle19">
     <label for="toggle19" class="hotspot-btn">2</label>
     <div class="popup">
-      <div class="my-title2">*Kafka Consumer*:</div>
-       [audio link](https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/JnUfUDc7PB6EagHb-recording.mp3)
+      <div class="popup-header">
+        <div class="my-title2">Kafka Consumer</div>
+        <div class="popup-nav">
+          <label for="toggle18" class="nav-btn prev"><</label>
+          <label for="toggle0e" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/JnUfUDc7PB6EagHb-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 </div>
+
 
 
 <div class="my-title1">Bulk Transfer</div>
@@ -724,15 +860,26 @@ A batch processing architecture has the following components:
 <div class="image-container">
   <img src="hip_component-overviews_file-transfer.png" alt="Demo Image" style="width:100%;">
 
-  <div class="hotspot" style="top: 0%; left: 30%;">
-    <input type="checkbox" id="toggle20">
-    <label for="toggle20" class="hotspot-btn">1</label>
+  <input type="radio" name="hotspotFile" id="toggle0f" checked hidden>
+
+  <div class="hotspot" style="top: 25%; left: 80%;">
+    <input type="radio" name="hotspotFile" id="toggle20">
+    <label for="toggle20" class="hotspot-btn">+</label>
     <div class="popup">
-      <div class="my-title2">S3 Self-Service</div>
-        [audio: https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/QCS5wZMli75170Hi-recording.mp3]
+      <div class="popup-header">
+        <div class="my-title2">S3 Self-Service</div>
+        <div class="popup-nav">
+          <label for="toggle0f" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/QCS5wZMli75170Hi-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 </div>
+
 
 
 <div class="my-title1">Integration Flows</div>
@@ -791,24 +938,45 @@ The [Getting Started page](https://wiki.helvetia.group/display/HIPUD/Getting+Sta
 <div class="image-container">
   <img src="hip_component-overviews_integration-flows.jpg" alt="Demo Image" style="width:100%;">
 
-  <div class="hotspot" style="top: 0%; left: 30%;">
-    <input type="checkbox" id="toggle21">
-    <label for="toggle21" class="hotspot-btn">1</label>
+  <input type="radio" name="hotspotFlow" id="toggle0g" checked hidden>
+
+  <div class="hotspot" style="top: 35%; left: 42%;">
+    <input type="radio" name="hotspotFlow" id="toggle21">
+    <label for="toggle21" class="hotspot-btn">+</label>
     <div class="popup">
-      <div class="my-title2">Integration Flow</div>
-        [audio: https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/4V3LivgcsUHzfdUu-recording.mp3]
+      <div class="popup-header">
+        <div class="my-title2">Integration Flow</div>
+        <div class="popup-nav">
+          <label for="toggle12" class="nav-btn next">></label>
+          <label for="toggle0g" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/4V3LivgcsUHzfdUu-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 
-  <div class="hotspot" style="top: 95%; left: 25%;">
-    <input type="checkbox" id="toggle22">
-    <label for="toggle22" class="hotspot-btn">2</label>
+  <div class="hotspot" style="top: 30%; left: 80%;">
+    <input type="radio" name="hotspotFlow" id="toggle22">
+    <label for="toggle22" class="hotspot-btn">+</label>
     <div class="popup">
-      <div class="my-title2">Sources and Targets</div>
-       [audio: https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/xdkUnTC4leVdTKFe-recording.mp3]
+      <div class="popup-header">
+        <div class="my-title2">Sources and Targets</div>
+        <div class="popup-nav">
+          <label for="toggle21" class="nav-btn next"><</label>
+          <label for="toggle0g" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width: 100%; max-width: 400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/xdkUnTC4leVdTKFe-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 </div>
+
 
 
 <div class="my-title1">API Gateway</div>
@@ -833,24 +1001,45 @@ An API gateway provides a **clean interface for clients** to interact with, maki
 <div class="image-container">
   <img src="hip_component-overviews_api-gateway-self-service.jpg" alt="Demo Image" style="width:100%;">
 
-  <div class="hotspot" style="top: 0%; left: 30%;">
-    <input type="checkbox" id="toggle23">
+  <input type="radio" name="hotspotApi" id="toggle0h" checked hidden>
+
+  <div class="hotspot" style="top: 50%; left: 55%;">
+    <input type="radio" name="hotspotApi" id="toggle23">
     <label for="toggle23" class="hotspot-btn">1</label>
     <div class="popup">
-      <div class="my-title2">API Gateway Self-Service</div>
-        [audio: https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/7mxtadzNI4LQidFK-recording.mp3]
+      <div class="popup-header">
+        <div class="my-title2">API Gateway Self-Service</div>
+        <div class="popup-nav">
+          <label for="toggle24" class="nav-btn"><</label>
+          <label for="toggle0h" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width:100%; max-width:400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/7mxtadzNI4LQidFK-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 
-  <div class="hotspot" style="top: 95%; left: 25%;">
-    <input type="checkbox" id="toggle24">
+  <div class="hotspot" style="top: 10%; left: 12%;">
+    <input type="radio" name="hotspotApi" id="toggle24">
     <label for="toggle24" class="hotspot-btn">2</label>
     <div class="popup">
-      <div class="my-title2">API Subscribers</div>
-       [audio: https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/utTng13vfYHKtfi_-recording.mp3]
+      <div class="popup-header">
+        <div class="my-title2">API Subscribers</div>
+        <div class="popup-nav">
+          <label for="toggle23" class="nav-btn">></label>
+          <label for="toggle0h" class="close-btn">x</label>
+        </div>
+      </div>
+      <audio controls style="width:100%; max-width:400px;">
+        <source src="https://articulate-us.s3.amazonaws.com/rise/courses/SnwEb9zji8P0azXWalkZoW8sSN1n2VEq/utTng13vfYHKtfi_-recording.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
   </div>
 </div>
+
 
 
 # Using the Helvetia Integration Platform
@@ -1432,8 +1621,9 @@ At Helvetia, Information is classified with the following schema:<br>
 
 <div class="my-title1">API Portal</div>
 
-
-![API Catalog](hip_component-overviews_api-catalog.jpg){opacity=0.5 zoom-on-click=true}
+<div class="image-container">
+  ![API Catalog](hip_component-overviews_api-catalog.jpg)
+</div>
 <br>
 
 <div class="GoodRead">
@@ -1510,63 +1700,78 @@ The integration process ideally follows an iterative DevOps approach, as display
 <div class="image-container">
   <img src="DevOps.jpg" alt="Demo Image" style="width:100%;">
 
+  <input type="radio" name="hotspotDevOps" id="toggle0i" checked hidden>
+
   <div class="hotspot" style="top: 10%; left: 48%;">
-    <input type="checkbox" id="toggle25">
+    <input type="radio" name="hotspotDevOps" id="toggle25" hidden>
     <label for="toggle25" class="hotspot-btn">0</label>
     <div class="popup">
-      <div class="my-title2">Smart Kick-Off Preparation</div>
-        **Activities**
-        <div class="felsorolas">
-        <ul>
-          <li>Review the target picture for your bounded context or domain with your Lead Architect, Enterprise Architect or Solution Architect peers</li>
-          <li>Make sure you know the current strategic goals and boundary conditions for integration</li>
-          <li>If in doubt, apply the following prioritization:
-          <div class="felsorolas">
-          <ul>
-            <li>Business value over technical strategy<br>
-            Do not implement an interface you do not understand (as SA you are the Design Authority). Exceptions to the technical strategy must be well justified.</li>
-            <li>Strategic goals over project-specific benefits<br> 
-            Helvetia benefits more from adhering to strategic goals than from pursuing individual interests</li>
-            <li>Flexibility over optimization<br>
-            Optimization of interfaces is normal and important, but flexible interfaces can be reused more easily</li>
-            <li>Evolutionary refinement over striving for initial perfection<br>
-            As requirements change, evolution of interfaces is the normal case. Implementing assumptions that have not been met creates unnecessary extra work.</li>
-          </ul>
-          </div>
-          </li>
-        </ul>
-        </div>
-        **Roles**
-        <div class="felsorolas">
-        <ul>
-          <li>Enterprise Architect</li>
-          <li>Lead Architect</li>
-          <li>Solution Architect</li>
-        </ul>
-        </div>
-        **Quality gate to complete the phase**
-        <div class="felsorolas">
-        <ul>
-          <li>Ensure you have a holistic understanding of the business context, the constraints and the sponsors interest and goals.</li>
-          <li>Use the Architecture Decision (ADL) as a gauge for this by deriving your solution options and making comprehensible and sustainable decisions</li>
-        </ul>
-        </div>
-        **TIP:**
-        <div class="felsorolas">
-        <ul>
-          <li>ARC42 is very helpful but you need to invest time!</li>
-          <li>Get an early understanding of the budget available for your task, this is often a difficult constraint.</li>
-        </ul>
+      <div class="popup-header">
+        <div class="my-title2">Smart Kick-Off Preparation</div>
+        <div class="popup-nav">
+          <label for="toggle26" class="nav-btn">></label>
+          <label for="toggle0i" class="close-btn">x</label>
         </div>
       </div>
+      **Activities**
+      <div class="felsorolas">
+      <ul>
+        <li>Review the target picture for your bounded context or domain with your Lead Architect, Enterprise Architect or Solution Architect peers</li>
+        <li>Make sure you know the current strategic goals and boundary conditions for integration</li>
+        <li>If in doubt, apply the following prioritization:
+        <div class="felsorolas">
+        <ul>
+          <li>Business value over technical strategy<br>
+          Do not implement an interface you do not understand (as SA you are the Design Authority). Exceptions to the technical strategy must be well justified.</li>
+          <li>Strategic goals over project-specific benefits<br> 
+          Helvetia benefits more from adhering to strategic goals than from pursuing individual interests</li>
+          <li>Flexibility over optimization<br>
+          Optimization of interfaces is normal and important, but flexible interfaces can be reused more easily</li>
+          <li>Evolutionary refinement over striving for initial perfection<br>
+          As requirements change, evolution of interfaces is the normal case. Implementing assumptions that have not been met creates unnecessary extra work.</li>
+        </ul>
+        </div>
+        </li>
+      </ul>
+      </div>
+      **Roles**
+      <div class="felsorolas">
+      <ul>
+        <li>Enterprise Architect</li>
+        <li>Lead Architect</li>
+        <li>Solution Architect</li>
+      </ul>
+      </div>
+      **Quality gate to complete the phase**
+      <div class="felsorolas">
+      <ul>
+        <li>Ensure you have a holistic understanding of the business context, the constraints and the sponsors interest and goals.</li>
+        <li>Use the Architecture Decision (ADL) as a gauge for this by deriving your solution options and making comprehensible and sustainable decisions</li>
+      </ul>
+      </div>
+      **TIP:**
+      <div class="felsorolas">
+      <ul>
+        <li>ARC42 is very helpful but you need to invest time!</li>
+        <li>Get an early understanding of the budget available for your task, this is often a difficult constraint.</li>
+      </ul>
+      </div>
     </div>
+  </div>
 
   <div class="hotspot" style="top: 20%; left: 48%;">
-    <input type="checkbox" id="toggle26">
+    <input type="radio" name="hotspotDevOps" id="toggle26" hidden>
     <label for="toggle26" class="hotspot-btn">1</label>
     <div class="popup">
-      <div class="my-title2">Kick-off</div>
-       **Activities**
+      <div class="popup-header">
+        <div class="my-title2">Kick-off</div>
+        <div class="popup-nav">
+          <label for="toggle25" class="nav-btn"><</label>
+          <label for="toggle27" class="nav-btn">></label>
+          <label for="toggle0i" class="close-btn">x</label>
+        </div>
+      </div>
+      **Activities**
       <div class="felsorolas">
       <ul>
         <li>Nominate Solution Architect & DevOps Engineer</li>
@@ -1595,20 +1800,27 @@ The integration process ideally follows an iterative DevOps approach, as display
   </div>
 
   <div class="hotspot" style="top: 29%; left: 34%;">
-    <input type="checkbox" id="toggle27">
+    <input type="radio" name="hotspotDevOps" id="toggle27" hidden>
     <label for="toggle27" class="hotspot-btn">2</label>
     <div class="popup">
-      <div class="my-title2">Plan & Design</div>
+      <div class="popup-header">
+        <div class="my-title2">Plan & Design</div>
+        <div class="popup-nav">
+          <label for="toggle26" class="nav-btn"><</label>
+          <label for="toggle28" class="nav-btn">></label>
+          <label for="toggle0i" class="close-btn">x</label>
+        </div>
+      </div>
       **Activities**
       <div class="felsorolas">
       <ul>
         <li>Determine FR & NFR</li>
         <li>Identify architecture domains and bounded contexts</li>
-        <li>Determine the [HIP integration pattern(s)](https://wiki.helvetia.group/display/HIPUD/Choosing+Integration+Pattern)</li>
-        <li>[Search for APIs and identify reusable APIs](https://backstage.hip.helvetia.io/)</li>
+        <li>Determine the <a href="https://wiki.helvetia.group/display/HIPUD/Choosing+Integration+Pattern">HIP integration pattern(s)</a></li>
+        <li><a href="https://backstage.hip.helvetia.io/">Search for APIs and identify reusable APIs</a></li>
         <li>Determine new API requirements</li>
         <li>Determine security needs e.g. authentication and authorization</li>
-        <li>Design information models according to [Helvetia Business Data Model (BDM)](https://wiki.helvetia.group/pages/viewpage.action?pageId=512674957)</li>
+        <li>Design information models according to <a href="https://wiki.helvetia.group/pages/viewpage.action?pageId=512674957">Helvetia Business Data Model (BDM)</a></li>
         <li>Document solution design with detailed API specifications</li> 
         <li>Communicate API design to stakeholders for their feedback</li>
         <li>Review solution design with HIP team</li>
@@ -1643,11 +1855,18 @@ The integration process ideally follows an iterative DevOps approach, as display
   </div>
 
   <div class="hotspot" style="top: 24%; left: 21%;">
-    <input type="checkbox" id="toggle28">
+    <input type="radio" name="hotspotDevOps" id="toggle28" hidden>
     <label for="toggle28" class="hotspot-btn">3</label>
     <div class="popup">
-      <div class="my-title2">Code</div>
-       **Activities**
+      <div class="popup-header">
+        <div class="my-title2">Code</div>
+        <div class="popup-nav">
+          <label for="toggle27" class="nav-btn"><</label>
+          <label for="toggle29" class="nav-btn">></label>
+          <label for="toggle0i" class="close-btn">x</label>
+        </div>
+      </div>
+      **Activities**
       <div class="felsorolas">
       <ul>
         <li>Implement API</li>
@@ -1672,11 +1891,18 @@ The integration process ideally follows an iterative DevOps approach, as display
   </div>
 
   <div class="hotspot" style="top: 73%; left: 18%;">
-    <input type="checkbox" id="toggle29">
+    <input type="radio" name="hotspotDevOps" id="toggle29" hidden>
     <label for="toggle29" class="hotspot-btn">4</label>
     <div class="popup">
-      <div class="my-title2">Test</div>
-       **Activities**
+      <div class="popup-header">
+        <div class="my-title2">Test</div>
+        <div class="popup-nav">
+          <label for="toggle28" class="nav-btn"><</label>
+          <label for="toggle30" class="nav-btn">></label>
+          <label for="toggle0i" class="close-btn">x</label>
+        </div>
+      </div>
+      **Activities**
       <div class="felsorolas">
       <ul>
         <li>Run unit tests</li>
@@ -1700,11 +1926,18 @@ The integration process ideally follows an iterative DevOps approach, as display
   </div>
 
   <div class="hotspot" style="top: 26%; left: 67%;">
-    <input type="checkbox" id="toggle30">
+    <input type="radio" name="hotspotDevOps" id="toggle30" hidden>
     <label for="toggle30" class="hotspot-btn">5</label>
     <div class="popup">
-      <div class="my-title2">Release & Deploy</div>
-       **Roles**
+      <div class="popup-header">
+        <div class="my-title2">Release & Deploy</div>
+        <div class="popup-nav">
+          <label for="toggle29" class="nav-btn"><</label>
+          <label for="toggle31" class="nav-btn">></label>
+          <label for="toggle0i" class="close-btn">x</label>
+        </div>
+      </div>
+      **Roles**
       <div class="felsorolas">
       <ul>
         <li>Issue GIT pull request</li>
@@ -1732,11 +1965,18 @@ The integration process ideally follows an iterative DevOps approach, as display
   </div>
 
   <div class="hotspot" style="top: 38%; left: 93%;">
-    <input type="checkbox" id="toggle31">
+    <input type="radio" name="hotspotDevOps" id="toggle31" hidden>
     <label for="toggle31" class="hotspot-btn">6</label>
     <div class="popup">
-      <div class="my-title2">Consume & Test</div>
-       **Activities**
+      <div class="popup-header">
+        <div class="my-title2">Consume & Test</div>
+        <div class="popup-nav">
+          <label for="toggle30" class="nav-btn"><</label>
+          <label for="toggle32" class="nav-btn">></label>
+          <label for="toggle0i" class="close-btn">x</label>
+        </div>
+      </div>
+      **Activities**
       <div class="felsorolas">
       <ul>
         <li>Subscribe to the API (self-service)</li>
@@ -1764,11 +2004,17 @@ The integration process ideally follows an iterative DevOps approach, as display
   </div>
 
   <div class="hotspot" style="top: 70%; left: 85%;">
-    <input type="checkbox" id="toggle32">
+    <input type="radio" name="hotspotDevOps" id="toggle32" hidden>
     <label for="toggle32" class="hotspot-btn">7</label>
     <div class="popup">
-      <div class="my-title2">Operate</div>
-       **Activities**
+      <div class="popup-header">
+        <div class="my-title2">Operate</div>
+        <div class="popup-nav">
+          <label for="toggle31" class="nav-btn"><</label>
+          <label for="toggle0i" class="close-btn">x</label>
+        </div>
+      </div>
+      **Activities**
       <div class="felsorolas">
       <ul>
         <li>iManage API lifecycle</li>
@@ -1796,6 +2042,7 @@ The integration process ideally follows an iterative DevOps approach, as display
     </div>
   </div>
 </div>
+
 
 
 <div class="GoodRead">
@@ -1839,38 +2086,60 @@ The illustration also shows an exemplary usage of HIP APIs. As HIP provides a se
 <div class="image-container">
   <img src="Q41s_CKx7hxshYLI.png" alt="Demo Image" style="width:100%;">
 
-  <div class="hotspot" style="top: 5%; left: 40%;">
-    <input type="checkbox" id="toggle33">
-    <label for="toggle33" class="hotspot-btn">1</label>
+  <input type="radio" name="hotspotRoles" id="toggle0j" checked hidden>
+
+  <div class="hotspot" style="top: 5%; left: 32%;">
+    <input type="radio" name="hotspotRoles" id="toggle33" hidden>
+    <label for="toggle33" class="hotspot-btn">+</label>
     <div class="popup">
-      <div class="my-title2">DevOps Team</div>
-        The DevOps team or Application team is the group of architects and developers that are responsible for developing and operating an application. In the context of HIP, they:<br>
-        <div class="felsorolas">
-        <ul>
-          <li>expose APIs on HIP</li>
-          <li>access APIs on HIP</li>
-        </ul>
-        </div><br>
-        The DevOps Team is responsible for designing, implementing and running their Integrations (not the integration infrastructure, though), following HIP Guidelines and staying informed on changes and developments of HIP.
+      <div class="popup-header">
+        <div class="my-title2">DevOps Team</div>
+        <div class="popup-nav">
+          <label for="toggle34" class="nav-btn">></label>
+          <label for="toggle0j" class="close-btn">x</label>
+        </div>
+      </div>
+      The DevOps team or Application team is the group of architects and developers that are responsible for developing and operating an application. In the context of HIP, they:<br>
+      <div class="felsorolas">
+      <ul>
+        <li>expose APIs on HIP</li>
+        <li>access APIs on HIP</li>
+      </ul>
+      </div><br>
+      The DevOps Team is responsible for designing, implementing and running their Integrations (not the integration infrastructure, though), following HIP Guidelines and staying informed on changes and developments of HIP.
     </div>
   </div>
 
-  <div class="hotspot" style="top: 25%; left: 45%;">
-    <input type="checkbox" id="toggle34">
-    <label for="toggle34" class="hotspot-btn">2</label>
+  <div class="hotspot" style="top: 22%; left: 42%;">
+    <input type="radio" name="hotspotRoles" id="toggle34" hidden>
+    <label for="toggle34" class="hotspot-btn">+</label>
     <div class="popup">
-      <div class="my-title2">The HIP Team</div>
-       The HIP Team is responsible for developing and operating the HIP Infrastructure and Self-Service Processes. They are not responsible for implementing and maintaining custom integration components and configurations. This activity is shifted to the consumers and producers of Data and Services.<br>
+      <div class="popup-header">
+        <div class="my-title2">The HIP Team</div>
+        <div class="popup-nav">
+          <label for="toggle33" class="nav-btn"><</label>
+          <label for="toggle35" class="nav-btn">></label>
+          <label for="toggle0j" class="close-btn">x</label>
+        </div>
+      </div>
+      The HIP Team is responsible for developing and operating the HIP Infrastructure and Self-Service Processes. They are not responsible for implementing and maintaining custom integration components and configurations. This activity is shifted to the consumers and producers of Data and Services.<br>
       The HIP Team is responsible for creating & maintaining documentation, guidelines, blueprints & best practices.  
       The HIP Team provides Consulting, Implementation and Operations (3rd Level) Support.
     </div>
   </div>
 
-  <div class="hotspot" style="top: 10%; left: 95%;">
-    <input type="checkbox" id="toggle35">
-    <label for="toggle35" class="hotspot-btn">3</label>
+  <div class="hotspot" style="top: 8%; left: 93%;">
+    <input type="radio" name="hotspotRoles" id="toggle35" hidden>
+    <label for="toggle35" class="hotspot-btn">+</label>
     <div class="popup">
-      <div class="my-title2">Roles DevOps Team</div>
+      <div class="popup-header">
+        <div class="my-title2">Roles DevOps Team</div>
+        <div class="popup-nav">
+          <label for="toggle34" class="nav-btn"><</label>
+          <label for="toggle36" class="nav-btn">></label>
+          <label for="toggle0j" class="close-btn">x</label>
+        </div>
+      </div>
       **API Owner**<br>
       The API Owner is a human and is responsible for:
       <div class="felsorolas">
@@ -1898,15 +2167,22 @@ The illustration also shows an exemplary usage of HIP APIs. As HIP provides a se
     </div>
   </div>
 
-  <div class="hotspot" style="top: 95%; left: 38%;">
-    <input type="checkbox" id="toggle36">
-    <label for="toggle36" class="hotspot-btn">4</label>
+  <div class="hotspot" style="top: 95%; left: 35%;">
+    <input type="radio" name="hotspotRoles" id="toggle36" hidden>
+    <label for="toggle36" class="hotspot-btn">+</label>
     <div class="popup">
-      <div class="my-title2">Governance Controls</div>
-       The last piece of information depicted in the diagram is about governance controls. HIP is built with high automation standards. This allows to enforce governance automatically at the self-service in a central location. On the other hand, HIP offers a wide range of guidance to the DevOps teams that shall help to establish a decentral governance. The DevOps teams are responsible to comply here.
+      <div class="popup-header">
+        <div class="my-title2">Governance Controls</div>
+        <div class="popup-nav">
+          <label for="toggle35" class="nav-btn"><</label>
+          <label for="toggle0j" class="close-btn">x</label>
+        </div>
+      </div>
+      The last piece of information depicted in the diagram is about governance controls. HIP is built with high automation standards. This allows to enforce governance automatically at the self-service in a central location. On the other hand, HIP offers a wide range of guidance to the DevOps teams that shall help to establish a decentral governance. The DevOps teams are responsible to comply here.
     </div>
   </div>
 </div>
+
 
 
 <div class="my-title1">Self-service</div>

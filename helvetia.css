@@ -32,6 +32,36 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.custom-toc {
+  position: fixed;      /* mindig a bal oldalon */
+  top: 60px;            /* ha van header, alá igazítva */
+  left: 0;
+  width: 200px;
+  padding: 10px;
+  background: rgb(var(--lia-grey-lighter));
+  border-right: 1px solid #ccc;
+  z-index: 500;
+}
+
+.custom-toc .toc-item {
+  margin-bottom: 10px;
+}
+
+.custom-toc .toc-item a {
+  text-decoration: none;
+  color: rgb(var(--lia-anthracite));
+}
+
+.custom-toc .toc-item a:hover {
+  text-decoration: underline;
+}
+
+
+.lia-container {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
 .parallax {
     transform: translateY(0);
     transition: transform 0.2s ease-out;
@@ -46,19 +76,20 @@ body {
 
 .video-container {
   position: relative;
+  padding: 20px;
   width: 100%;
   max-width: 800px;   /* maximum szélesség, hogy ne nőjön végtelenre */
-  margin: 0 auto;     /* középre igazítás */
   aspect-ratio: 16 / 9; /* megtartja a 16:9 arányt */
+  border: 1px solid rgb(var(--lia-grey-light));
+  margin: 5px;
+  box-sizing: border-box;
 }
 
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  border: none;
+  display: block;
 }
 
 .felsorolas {
@@ -75,37 +106,12 @@ body {
   .my-title2 {
     font-size: 1.8rem;
     font-weight: bold;
-    margin-top: 2rem;
     margin-bottom: 1rem;
   }  
 
 button,
 .lia-pagination__content {
     border-radius: 0 !important;
-}
-
-.lia-toc {
-    background-color: rgb(var(--lia-grey-lighter));
-    font-size: smaller;
-    padding: 10px;
-    list-style: none;
-}
-
-.lia-toc li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 8px;
-}
-
-.lia-toc li input[type="checkbox"] {
-  display: none;
-}
-
-.lia-toc li input[type="checkbox"]:checked + a::before {
-  content: "✔";
-  color: green;
-  position: absolute;
-  left: 0;
 }
 
 
@@ -246,84 +252,80 @@ is-success .lia-checkbox[type=checkbox].is-failure:checked {
 }
 
 .GoodRead {
-  background-color: rgba(255, 98, 98, 0.449);
+  background-color: rgba(254, 83, 83, 0.512);
   padding: 10px;
   font-size: 12px;
   border: 1px solid red;
 }
-
-/* --- Tab container --- */
-.tab-container {
-    width: 100%;
-    border: 1px solid #000000;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* --- Tab gombok --- */
-  .tab-buttons {
-    display: flex;
-    width: 100%;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .tab-btn {
-    flex: 1;
-    text-align: center;
-    padding: 12px 8px;
-    background: #f9f9f9;
-    border: 1px solid #ccc;
-    border-bottom: none;
-    cursor: pointer;
-    font-weight: bold;
-    box-sizing: border-box;
+.TargetVision {
+  background-color: rgb(var(--lia-grey-lighter));
+  color: black;
+  padding: 20px;
+  border: 1px solid rgb(var(--lia-grey));
 }
-  
-  .tab-btn:hover {
-    background: white;
-    color: red;
-  }
-  
-  /* --- Rádiógombok elrejtése --- */
-  .tab-container input[type="radio"] {
-    display: none;
-  }
-  
-  /* --- Alapértelmezett panelek elrejtése --- */
-  .tab-content .panel {
-    display: none;
-    animation: fadeIn 0.5s ease;
-  }
-  
-  /* --- Az aktív panel megjelenítése rádiógomb alapján --- */
-  #tab1:checked ~ .tab-buttons + .tab-content .panel1,
-  #tab2:checked ~ .tab-buttons + .tab-content .panel2,
-  #tab3:checked ~ .tab-buttons + .tab-content .panel3 {
-    display: block;
-    padding: 10px;
-    margin: 0;
-  }
+
+.tab-wrapper {
+  width: 100%;
+}
+
+.tab-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid rgb(var(--lia-grey-light));
+  overflow: hidden;
+}
+
+/* TAB GOMBOK */
+.tab-buttons {
+  display: flex;
+}
+
+.tab-buttons label {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  background: rgb(var(--lia-grey-lighter));
+  border-right: 1px solid rgb(var(--lia-grey-light));
+  cursor: pointer;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.tab-buttons label:last-child {
+  border-right: none;
+}
+
+/* Aktív tab (radio checked) */
+#tab1:checked ~ .tab-container .tab-buttons label[for="tab1"],
+#tab2:checked ~ .tab-container .tab-buttons label[for="tab2"],
+#tab3:checked ~ .tab-container .tab-buttons label[for="tab3"] {
+  background: rgb(var(--lia-white));
+  color: rgb(var(--lia-red));
+}
+
+/* Tartalom alapból rejtve */
+.tab-content {
+  display: none;
+  padding: 16px;
+  background: white;
+}
+
+/* Aktív tartalom */
+#tab1:checked ~ .tab-container .tab-contents #content1,
+#tab2:checked ~ .tab-container .tab-contents #content2,
+#tab3:checked ~ .tab-container .tab-contents #content3 {
+  display: block;
+}
+
+
   
   /* --- Címek stílusa --- */
   .my-title2 {
     font-weight: bold;
     margin-top: 1em;
     margin-bottom: 0.5em;
-  }
-
-  .Achim-container {
-    display: inline-flex;
-    background-color: #f4f4f4;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 40px;
-    gap: 20px;
-  }
-
-  .Achim-head {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .image-container {
@@ -415,25 +417,40 @@ is-success .lia-checkbox[type=checkbox].is-failure:checked {
   color: white;
   border: 1px solid white;
 }
-.popup-nav {
+.popup-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.popup-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.popup-header .my-title2 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.2;
 }
 
 .nav-btn {
-  background: rgb(186, 0, 0);
-  color: white;
+  color: rgb(var(--lia-grey));
   border: none;
-  border-radius: 4px;
-  padding: 2px 8px;
+  margin-right: 10px;
   font-size: 14px;
   cursor: pointer;
   font-weight: bold;
+  padding: 0;
 }
-
-.nav-btn:hover {
-  background: #a00000;
+.close-btn {
+  color: rgb(var(--lia-grey));
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
 }
 
 .circle-list {
@@ -499,7 +516,15 @@ is-success .lia-checkbox[type=checkbox].is-failure:checked {
 }
 
 .accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion summary::-webkit-details-marker {
   display: none; /* kis háromszög eltüntetése */
+}
+
+.accordion summary::before {
+  content: ""; /* nincs előre definiált szöveg */
 }
 
 .accordion .content {
@@ -519,6 +544,27 @@ is-success .lia-checkbox[type=checkbox].is-failure:checked {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.full-width-section .Achim-container {
+  max-width: 800px;
+  display: flex;
+  margin: 0 auto;
+  padding: 40px;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+.Achim-container .content-flex {
+  display: flex;       /* egymás mellé teszi a gyerekeket */
+  align-items: flex-start;
+  gap: 20px;
+}
+  .Achim-container .Achim-head {
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .Achim-container .Achim {
+    flex: 1;
+  }
 .DO-base {
   color: black;
 }
