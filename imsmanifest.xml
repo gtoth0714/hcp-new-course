@@ -1,0 +1,175 @@
+<?xml version="1.0" standalone="no" ?>
+<manifest identifier="SnwEb9zji8P0azXWalkZoW8sSN1n2VEqNYiPEUea" version="1.3"
+  xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
+  xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3"
+  xmlns:adlnav = "http://www.adlnet.org/xsd/adlnav_v1p3"
+  xmlns:imsss="http://www.imsglobal.org/xsd/imsss"
+  xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd
+                      http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd
+                      http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd
+                      http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>CAM 1.3</schemaversion>
+    <adlcp:location>metadata.xml</adlcp:location>   
+  </metadata>
+  <organizations default="B0">
+    <organization identifier="B0" adlseq:objectivesGlobalToSystem="false">
+      <title>HIP Explorer</title>
+      <item identifier="i1" identifierref="r1" isvisible="true">
+        <title>HIP Explorer</title>
+        <adlcp:dataFromLMS>eyJjcHYiOiJOWWlQRVVlYSIsInJsZCI6ZmFsc2V9</adlcp:dataFromLMS>
+        <adlnav:presentation>
+          <adlnav:navigationInterface>
+            <!--Does your LMS provide options for hiding UI/UX elements? 
+            If yes, uncomment the below options to hide the UI/UX elements.-->
+            <!--<adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>suspendAll</adlnav:hideLMSUI>-->
+          </adlnav:navigationInterface>
+        </adlnav:presentation>
+        <imsss:sequencing>
+          <imsss:deliveryControls tracked="true" completionSetByContent="true" objectiveSetByContent="true"/>
+        </imsss:sequencing>
+      </item>
+      <metadata>
+        <adlcp:location>metadata.xml</adlcp:location>
+      </metadata>
+      <imsss:sequencing>
+        <imsss:controlMode choice="true" flow="true"/>
+      </imsss:sequencing>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="r1" type="webcontent" adlcp:scormType="sco" href="scormdriver/indexAPI.html">
+      <!-- SCORMDRIVER STUFF -->
+      <file href="scormdriver/indexAPI.html" />
+      <file href="scormdriver/preloadIntegrity.js" />
+      <file href="scormdriver/driverOptions.js" />
+      <file href="scormdriver/AICCComm.html" />
+      <file href="scormdriver/auto-scripts/AutoBookmark.js" />
+      <file href="scormdriver/auto-scripts/AutoCompleteSCO.js" />
+      <file href="scormdriver/auto-scripts/CourseExit.js" />
+      <file href="scormdriver/blank.html" />
+      <file href="scormdriver/goodbye.html" />
+      <file href="scormdriver/scormdriver.js" />
+      <file href="scormdriver/browsersniff.js" />
+
+      <!-- RUNTIME COMMON STUFF -->
+      <file href="scormcontent/index.html" />
+
+      
+        <file href="scormcontent/lib/fonts/icomoon.ttf"/>
+        <file href="scormcontent/lib/fonts/icomoon.woff"/>
+
+        <file href="scormcontent/lib/icomoon.css"/>
+        <file href="scormcontent/lib/player-0.0.11.min.js"/>
+        <file href="scormcontent/lib/lzwcompress.js"/>
+      
+
+      <!-- FRONTEND BUNDLE ASSETS -->
+      <file href="scormcontent/lib/rise/5a80284f.js" />
+<file href="scormcontent/lib/rise/7e0f772a.css" />
+<file href="scormcontent/lib/rise/0bfde9a2.js" />
+<file href="scormcontent/lib/rise/6301d206.css" />
+<file href="scormcontent/lib/rise/6a925e46.js" />
+<file href="scormcontent/lib/rise/1f3bd0b9.js" />
+<file href="scormcontent/lib/rise/0f1e25aa.js" />
+<file href="scormcontent/lib/rise/04289189.js" />
+<file href="scormcontent/lib/rise/b34552c9.js" />
+<file href="scormcontent/lib/rise/3e0bd8fb.js" />
+<file href="scormcontent/lib/rise/c4e1a828.js" />
+<file href="scormcontent/lib/rise/0bcec83e.js" />
+<file href="scormcontent/lib/rise/6668ba86.js" />
+<file href="scormcontent/lib/mondrian/entry.js" />
+<file href="scormcontent/lib/mondrian/ab103845.js" />
+<file href="scormcontent/lib/mondrian/ae35919a.js" />
+<file href="scormcontent/lib/mondrian/b48c3821.js" />
+<file href="scormcontent/lib/mondrian/09e37aee.js" />
+<file href="scormcontent/lib/mondrian/196251cf.js" />
+<file href="scormcontent/lib/sandbox/sandbox.html" />
+<file href="scormcontent/lib/sandbox/d12736b8.js" />
+<file href="scormcontent/lib/sandbox/4adfab46.css" />
+
+
+      <!-- RUNTIME CONTENT STUFF -->
+      <file href="scormcontent/lib/fonts/Lato2-Regular.woff" />
+<file href="scormcontent/lib/fonts/Lato2-Light.woff" />
+<file href="scormcontent/lib/fonts/Lato2-Italic.woff" />
+<file href="scormcontent/lib/fonts/Lato2-Bold.woff" />
+<file href="scormcontent/lib/fonts/Lato2-Black.woff" />
+<file href="scormcontent/lib/fonts/Merriweather-Black.woff" />
+<file href="scormcontent/lib/fonts/Merriweather-Italic.woff" />
+<file href="scormcontent/lib/fonts/Merriweather-Bold.woff" />
+<file href="scormcontent/lib/fonts/Merriweather-Regular.woff" />
+<file href="scormcontent/lib/fonts/Merriweather-Light.woff" />
+<file href="scormcontent/assets/pk0ejVBLZLIHU8ms.jpg" />
+<file href="scormcontent/assets/Bild1.jpg" />
+<file href="scormcontent/assets/Bild2.jpg" />
+<file href="scormcontent/assets/Bild3.jpg" />
+<file href="scormcontent/assets/osxKWT/quote_background.jpg" />
+<file href="scormcontent/assets/user-avatar.jpg" />
+<file href="scormcontent/assets/_29ZL4/mountains.jpg" />
+<file href="scormcontent/assets/Screenshot%202022-05-03%20173833.jpg" />
+<file href="scormcontent/assets/Screenshot%202022-05-03%20174203.jpg" />
+<file href="scormcontent/assets/Screenshot%202022-05-03%20174624.jpg" />
+<file href="scormcontent/assets/Screenshot%202022-05-10%20104341.png" />
+<file href="scormcontent/assets/recording.mp3" />
+<file href="scormcontent/assets/3xH-_Q/recording.mp3" />
+<file href="scormcontent/assets/epNfSX/recording.mp3" />
+<file href="scormcontent/assets/HIP.jpg" />
+<file href="scormcontent/assets/SY7Uhz/recording.mp3" />
+<file href="scormcontent/assets/f0OQyh/recording.mp3" />
+<file href="scormcontent/assets/EIHpjT/recording.mp3" />
+<file href="scormcontent/assets/T3_mkB/recording.mp3" />
+<file href="scormcontent/assets/PpORhivbhdKYvX_S.png" />
+<file href="scormcontent/assets/Integration%20Patterns.png" />
+<file href="scormcontent/assets/Fovhro/recording.mp3" />
+<file href="scormcontent/assets/E6hW9b/recording.mp3" />
+<file href="scormcontent/assets/8ijQ_i/recording.mp3" />
+<file href="scormcontent/assets/Target%20Vision%20Integration.pdf" />
+<file href="scormcontent/assets/Philipp%20Willener.jpg" />
+<file href="scormcontent/assets/hip_component-overviews_how-does-hip-work.png" />
+<file href="scormcontent/assets/hip_component-overviews_api-catalog.jpg" />
+<file href="scormcontent/assets/gYlkTX/recording.mp3" />
+<file href="scormcontent/assets/E10xDT/recording.mp3" />
+<file href="scormcontent/assets/fU-Is5/recording.mp3" />
+<file href="scormcontent/assets/hip_component-overviews_kafka-self-service.png" />
+<file href="scormcontent/assets/GL4OGK/recording.mp3" />
+<file href="scormcontent/assets/sEXKhI/recording.mp3" />
+<file href="scormcontent/assets/hip_component-overviews_file-transfer.png" />
+<file href="scormcontent/assets/p7tE-x/recording.mp3" />
+<file href="scormcontent/assets/hip_component-overviews_integration-flows.jpg" />
+<file href="scormcontent/assets/ab4QuT/recording.mp3" />
+<file href="scormcontent/assets/RQxlVA/recording.mp3" />
+<file href="scormcontent/assets/hip_component-overviews_api-gateway-self-service.jpg" />
+<file href="scormcontent/assets/3YjtWt/recording.mp3" />
+<file href="scormcontent/assets/zS1mE4/recording.mp3" />
+<file href="scormcontent/assets/HIP-Kafka-Connect-API.png" />
+<file href="scormcontent/assets/HIP-Kafka-Producer-Consumer-API.png" />
+<file href="scormcontent/assets/HIP-Kafka-Streams-API.png" />
+<file href="scormcontent/assets/HIP-Kafka-CDC.png" />
+<file href="scormcontent/assets/HIP-Kafka-CDC-DB.png" />
+<file href="scormcontent/assets/HIP-Sync-API-GW.png" />
+<file href="scormcontent/assets/HIP-expose-external-api.png" />
+<file href="scormcontent/assets/HIP-consume-external-api.png" />
+<file href="scormcontent/assets/HIP-bulk-transfer-api.png" />
+<file href="scormcontent/assets/HIP-integration-flow-case1.png" />
+<file href="scormcontent/assets/HIP-integration-flow-case2.png" />
+<file href="scormcontent/assets/45SL6z/hip_component-overviews_api-catalog.jpg" />
+<file href="scormcontent/assets/1_UJ7DBUYOKm6dPMJkANe88g.jpg" />
+<file href="scormcontent/assets/Q41s_CKx7hxshYLI.png" />
+<file href="scormcontent/assets/stock-image.jpg" />
+
+      <file href="scormcontent/locales/de.js" />
+
+    </resource>
+  </resources>
+</manifest>

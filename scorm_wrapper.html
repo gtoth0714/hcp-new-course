@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SCORM Wrapper</title>
+  <link rel="stylesheet" href="helvetia.css">
+  <script src="scormcontent/lib/player-0.0.11.min.js"></script>
+  <script src="scormcontent/lib/lzwcompress.js"></script>
+</head>
+<body>
+  <div class="video-container">
+    <iframe src="https://api.eu.kaltura.com/p/119/sp/11900/embedIframeJs/uiconf_id/23449901/partner_id/119?iframeembed=true&playerId=kaltura_player&entry_id=0_f01ckyds">
+    </iframe>
+  </div>
+
+  <script>
+const iframe = document.querySelector('iframe');
+const player = new playerjs.Player(iframe);
+
+// Videó események figyelése
+player.on('play', () => console.log('Videó elindult'));
+player.on('ended', () => {
+  console.log('Videó véget ért');
+  // SCORM COMPLETE trigger
+  if (window.SCORM) {
+    SCORM.Complete(); // vagy a player JS scorm-complete metódusa
+  }
+});
+  </script>
+</body>
+</html>

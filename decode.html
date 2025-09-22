@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Decoder</title>
+</head>
+<body>
+  <h2>HIP Course Base64 Decoder</h2>
+  <textarea id="input" rows="10" cols="100" placeholder="Paste the base64 string (eyJ...) here"></textarea><br><br>
+  <button onclick="decode()">Decode</button>
+  <pre id="output" style="white-space: pre-wrap; background: #f0f0f0; padding: 10px;"></pre>
+
+  <script>
+    function lzwDecompress(s) {
+      const dict = [];
+      const data = s.split('');
+      let currChar = data[0];
+      let oldPhrase = currChar;
+      const out = [currChar];
+      let code = 256;
+      let phrase = '';
+      for (let i = 1; i < data.length; i++) {
+        const currCode = data[i].charCodeAt(0);
+        phrase = (currCode < 256) ? data[i] : (dict[currCode] || (oldPhrase + currChar));
+        out.push(phrase);
+        currChar = phrase.charAt(0);
+        dict[code] = oldPhrase + currChar;
+        code++;
+        oldPhrase = phrase;
+      }
+      return out.join('');
+    }
+
+    function decode() {
+      const base64 = document.getElementById('input').value.trim();
+      try {
+        const decoded = atob(base64);
+        const decompressed = lzwDecompress(decoded);
+        const json = JSON.parse(decompressed);
+        document.getElementById('output').textContent = JSON.stringify(json, null, 2);
+      } catch (e) {
+        document.getElementById('output').textContent = 'Error decoding: ' + e.message;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -500,6 +500,34 @@ is-success .lia-checkbox[type=checkbox].is-failure:checked {
   color: rgb(186, 0, 0);
 }
 
+.accordion-item {
+  border: 1px solid rgb(var(--lia-grey-light));
+  margin: 0;
+}
+
+.accordion-label {
+  display: block;
+  padding: 12px;
+  background: rgb(var(--lia-white));
+  cursor: pointer;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 12px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .accordion-content {
+  padding: 12px;
+  max-height: 500px;
+}
+
 .accordion details {
   border: 1px solid rgb(var(--lia-grey-light));
   margin: 0;
@@ -513,24 +541,30 @@ is-success .lia-checkbox[type=checkbox].is-failure:checked {
   list-style: none;
   outline: none;
   cursor: pointer;
+  user-select: none;
+  position: relative;
 }
 
 .accordion summary::-webkit-details-marker {
   display: none;
 }
-
-.accordion summary::-webkit-details-marker {
-  display: none; /* kis háromszög eltüntetése */
+.accordion summary::marker { 
+  content: none; 
 }
 
-.accordion summary::before {
-  content: ""; /* nincs előre definiált szöveg */
+.accordion summary::after {
+  content: "+";
+  position: absolute;
+  right: 15px;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
 }
 
-.accordion .content {
-  padding: 20px;
-  background: rgb(var(--lia-white));
+.accordion details[open] summary::after {
+  content: "-";
 }
+
+
 .full-width-section {
   position: relative;
   left: 0;
@@ -605,6 +639,59 @@ is-success .lia-checkbox[type=checkbox].is-failure:checked {
     from { opacity: 0; }
     to { opacity: 1; }
   }
+
+.cim-lila {
+  color: white; 
+  padding: 1rem; 
+  font-size: 1.5rem; 
+  border: 1px solid rgb(var(--lia-grey-light));
+  background-color: rgb(110, 5, 110);
+}
+.cim-zold {
+  color: white; 
+  padding: 1rem; 
+  font-size: 1.5rem; 
+  border: 1px solid rgb(var(--lia-grey-light));
+  background-color: rgb(var(--color-highlight-menu));
+}
+.cim-piros {
+  color: white; 
+  padding: 1rem; 
+  font-size: 1.5rem; 
+  border: 1px solid rgb(var(--lia-grey-light));
+  background-color: rgb(var(--lia-red-dark));
+}
+.tartalom-vege {
+  background-color: rgb(var(--lia-white));
+  border: 1px solid rgb(var(--lia-grey-light));
+  padding: 1rem;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+
+.custom-table td {
+    border: 1px solid rgb(var(--lia-grey-light));
+    vertical-align: top;
+    text-align: left;
+    padding: 0.4rem 0.6rem;
+}
+
+.custom-table td:first-child {
+    width: 200px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.custom-table td ul {
+    margin: 0;
+    padding-left: 1rem;
+}
 
 /* Alap fade-in stílus minden elemre, ami blokkszintű */
 p, h1, h2, h3, h4, h5, h6, img, iframe, blockquote, li {

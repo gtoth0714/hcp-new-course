@@ -39,7 +39,6 @@ sharing: false
 </div>
 
 
-
 # Introduction
 
 <div class="my-title1">Introduction video</div>
@@ -47,9 +46,7 @@ sharing: false
 This introduction video summarizes the fundamental concepts behind Helvetia Integration Platform (HIP).  
 The video outlines the idea behind the HIP Academy Learning Paths and how you, as a learner, can further progress your journey.
 
-<div class="video-container">
-  <iframe src="https://api.eu.kaltura.com/p/119/sp/11900/embedIframeJs/uiconf_id/23449901/partner_id/119?iframeembed=true&playerId=kaltura_player&entry_id=0_f01ckyds" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-</div>
+<iframe src="scorm_wrapper.html" style="width:100%; height:600px; border:none;"></iframe>
 
 ---
 
@@ -1087,91 +1084,53 @@ For example:
 Each event includes a description of **what happened**.
 
 
-<div class="accordion">
 
-<details>
-  <summary>Integration using Kafka Connect API</summary>
-  <div class="content">
+<div class="accordion-item">
+  <label class="accordion-label" for="acc1">**Integration using Kafka Connect API**</label>
+  <input type="checkbox" id="acc1">
+  <div class="accordion-content">
+    Kafka Connect is a tool for scalably and reliably streaming data between Apache Kafka and other systems. Kafka Connect runs so called connectors that integrate a specific source with Kafka (or vice versa). There is a wide range of connectors available (e.g. HDFS, S3, JDBC, etc.)
     ![Kafka Connect](HIP-Kafka-Connect-API.png)
-
-    **Kafka Connect** is a tool for scalably and reliably streaming data between Apache Kafka and other systems. It runs **connectors** that integrate a specific source with Kafka (or vice versa).
-    Connectors include:
-    <div class="felsorolas">
-    <ul>
-      <li>HDFS</li>
-      <li>S3</li>
-      <li>JDBC</li>
-      <li>and many more</li>
-    </ul>
-    </div>
   </div>
-</details>
+</div>
 
-<details>
-  <summary>Integration using Kafka Producer & Consumer API</summary>
-  <div class="content">
+<div class="accordion-item">
+  <label class="accordion-label" for="acc2">**Integration using Kafka Producer & Consumer API**</label>
+  <input type="checkbox" id="acc2">
+  <div class="accordion-content">
+    Kafka offers a Producer API and a Customer API to write and consume events respectively. A Kafka Topic typically resides in the Bounded Context of the producer.
     ![Kafka Producer & Consumer](HIP-Kafka-Producer-Consumer-API.png)
-
-    Kafka provides:
-    <div class="felsorolas">
-      <ul>
-        <li>**Producer API** to write events</li> 
-        <li>**Consumer API** to read/consume events</li>
-      </ul>
-    </div>
-
-    A Kafka Topic typically resides in the **Bounded Context** of the producer.
   </div>
-</details>
+</div>
 
-<details>
-  <summary>Integration using Kafka Streams API</summary>
-  <div class="content">
+<div class="accordion-item">
+  <label class="accordion-label" for="acc3">**Integration using Kafka Streams API**</label>
+  <input type="checkbox" id="acc3">
+  <div class="accordion-content">
+    Kafka Streams is a client library for building applications and microservices using Kafka topics as input and output.  
+    It is well-suited to filter, combine Kafka Events and perform complex, stateful transformations.
     ![Kafka Streams](HIP-Kafka-Streams-API.png)
-
-    Kafka Streams is a **client library** for building applications and microservices using Kafka topics as input and output.  
-
-    It is well-suited for:
-    <div class="felsorolas">
-      <ul>
-        <li>filtering</li>
-        <li>combining events</li>
-        <li>**stateful transformations**</li>
-      </ul>
-    </div>
   </div>
-</details>
+</div>
 
-<details>
-  <summary>Integration with Kafka using CDC</summary>
-  <div class="content">
+<div class="accordion-item">
+  <label class="accordion-label" for="acc4">**Integration with Kafka using CDC**</label>
+  <input type="checkbox" id="acc4">
+  <div class="accordion-content">
+    Change Data Capture (CDC) is a pattern for continuous data integration. CDC identifies and captures changes mode to a database. Those changes can be transmitted to another data store such as Kafka.
     ![Kafka CDC](HIP-Kafka-CDC.png)
-
-    **Change Data Capture (CDC)** is a pattern for **continuous data integration**.  
-
-    CDC:
-    <div class="felsorolas">
-      <ul>
-        <li>Identifies changes in a database</li> 
-        <li>Captures and transmits them to another store (e.g., Kafka)</li>
-      </ul>
-    </div>
   </div>
-</details>
+</div>
 
-<details>
-  <summary>Integration with Kafka using CDC and Target DB</summary>
-  <div class="content">
+<div class="accordion-item">
+  <label class="accordion-label" for="acc5">**Integration with Kafka using CDC and Target DB**</label>
+  <input type="checkbox" id="acc5">
+  <div class="accordion-content">
+    Using CDC + Kafka, real-time data integration can be achieved.
+    But what if the consumer can’t talk to Kafka directly (e.g. a custom Excel application)?  
+    In such cases, use a Kafka Connect Sink to push data to a target database.
     ![Kafka CDC + DB](HIP-Kafka-CDC-DB.png)
-
-    Using **CDC + Kafka**, real-time data integration can be achieved.
-
-    But what if the **consumer can’t talk to Kafka** directly (e.g. a custom Excel application)?  
-
-    In such cases, use a **Kafka Connect Sink** to push data to a **target database**.
   </div>
-</details>
-
 </div>
 <br><br>
 
@@ -1189,43 +1148,36 @@ Each event includes a description of **what happened**.
 
 <div class="my-title1">Synchronous Integration (HTTP APIs)</div>
 
-<div class="accordion">
 
-<details>
-  <summary>Internal APIs consumption / exposure</summary>
-  <div class="content">
+<div class="accordion-item">
+  <label class="accordion-label" for="acc6">**Internal APIs consumption / exposure**</label>
+  <input type="checkbox" id="acc6">
+  <div class="accordion-content">
+    The HIP API Gateway is used to decouple API clients (HTTP client)from the API provider (HTTP upstream service).  
+    The exposed API is always in the Bounded Context of the providing system.
     ![Internal APIs](HIP-Sync-API-GW.png)
-
-    The **HIP API Gateway** is used to decouple API clients (HTTP client)from the API provider (HTTP upstream service).  
-
-    The exposed API is **always** in the **Bounded Context** of the providing system.
   </div>
-</details>
+</div>
 
-<details>
-  <summary>Exposing external APIs</summary>
-  <div class="content">
+<div class="accordion-item">
+  <label class="accordion-label" for="acc7">**Exposing external APIs**</label>
+  <input type="checkbox" id="acc7">
+  <div class="accordion-content">
+    The HIP API Gateway can expose APIs for Helvetia-external clients.  
+    Again, the API resides in the Bounded Context of the provider system.
     ![Exposing External APIs](HIP-expose-external-api.png)
-
-    The **HIP API Gateway** can expose APIs for **Helvetia-external** clients.  
-
-    Again, the API resides in the **Bounded Context** of the provider system.
   </div>
-</details>
+</div>
 
-<details>
-  <summary>Consuming external APIs</summary>
-  <div class="content">
+<div class="accordion-item">
+  <label class="accordion-label" for="acc8">**Consuming external APIs**</label>
+  <input type="checkbox" id="acc8">
+  <div class="accordion-content">
+    Note about outgoing traffic: Proxy vs. API Gateway.
+    It is currently under discussion whether outgoing traffic  should go through the API Gateway or via a proxy.
+    When Helvetia applications access external APIs, the HIP API Gateway can be used.
     ![Consuming External APIs](HIP-consume-external-api.png)
-
-    ⚠️ **Note about outgoing traffic: Proxy vs. API Gateway**
-
-    It is currently **under discussion** whether outgoing traffic  should go through the API Gateway or via a **proxy**.
-
-    When Helvetia applications access external APIs,  
-    the **HIP API Gateway** can be used.
   </div>
-</details>
 </div>
 <br><br>
 
@@ -1234,20 +1186,15 @@ Each event includes a description of **what happened**.
 <div class="my-title1">Bulk Transfer</div>
 
 
-<div class="accordion">
-
-<details>
-  <summary>Bulk File Simple / Notification</summary>
-  <div class="content">
+<div class="accordion-item">
+  <label class="accordion-label" for="acc9">**Bulk File Simple / Notification**</label>
+  <input type="checkbox" id="acc9">
+  <div class="accordion-content">
+    Bulk file transfers can be made via AWS S3 buckets, which allow for uploading/downloading large files.  
+    The S3 topic is typically in the Bounded Context of the producer.  
+    Optionally, a Kafka topic can be used to receive notification events from S3.
     ![Bulk Transfer](HIP-bulk-transfer-api.png)
-
-    Bulk file transfers can be made via **AWS S3 buckets**, which allow for uploading/downloading large files.  
-
-    The S3 topic is typically in the **Bounded Context** of the producer.  
-
-    Optionally, a **Kafka topic** can be used to receive notification events from S3.
   </div>
-</details>
 </div>
 <br><br>
 
@@ -1269,27 +1216,23 @@ For example:
 - Workflow-driven coordination between external and internal APIs
 
 
-<div class="accordion">
-
-<details>
-  <summary>Integration Flow – Case 1</summary>
-  <div class="content">
-    ![Integration Flow – Case 1](HIP-integration-flow-case1.png)
-
+<div class="accordion-item">
+  <label class="accordion-label" for="acc10">**Integration Flow – Case 1**</label>
+  <input type="checkbox" id="acc10">
+  <div class="accordion-content">
     An application consumes an API from another application via API Gateway.The consuming application integrates the processing in its own application.The same applies to the backend application that provides the API.  
-
-    In this ideal case, **no additional integration flow** is required,  as the integration is handled within the application itself.
+    In this ideal case, no additional integration flow is required,  as the integration is handled within the application itself.
+    ![Integration Flow – Case 1](HIP-integration-flow-case1.png)
   </div>
-</details>
+</div>
 
-<details>
-  <summary>Integration Flow – Case 2</summary>
-  <div class="content">
+<div class="accordion-item">
+  <label class="accordion-label" for="acc11">**Integration Flow – Case 2**</label>
+  <input type="checkbox" id="acc11">
+  <div class="accordion-content">
+    When the API consumer or provider has specific integration needs (e.g. transforming a REST API to an internal SOAP interface), and cannot adapt to a given interface (due to technical limits or cost), a dedicated integration flow helps to solve the issue.
     ![Integration Flow – Case 2](HIP-integration-flow-case2.png)
-
-    When the API consumer or provider has specific integration needs (e.g. transforming a REST API to an internal SOAP interface), and cannot adapt to a given interface (due to technical limits or cost), a **dedicated integration flow** helps to solve the issue.
   </div>
-</details>
 </div>
 <br><br>
 
@@ -2279,82 +2222,139 @@ Based on the integration technology and its constraint, we have to work with dif
 
 While you are responsible for your integrations, the HIP experts support your projects with hands-on guidance and advice:<br>
 
-<div class="my-title2">Integration Architecture</div>
-
-- Do you need a review of your integration solution design?  
-- Do you need help choosing the right pattern for your integration?  
-- Do you think HIP does not fit for your purpose?
-
-Please contact us on Teams: **#hip-integration-request**
 
 
-<div class="my-title2">Technical Support</div>
+<div class="cim-lila">
+  Integration Architecture
+</div>
 
-Do you have any technical issue in connection with HIP that you weren't able to solve after you consulted our FAQ page or this documentation?  
-Please let us know on Teams:
+<div class="tartalom-vege">
+<div class="felsorolas">
+  <ul>
+    <li>Do you need a review of your integration solution design? </li> 
+    <li>Do you need help choosing the right pattern for your integration?</li>
+    <li>Do you think HIP does not fit for your purpose?</li>
+  </ul>
+</div><br>
+Please contact us on Teams:<br>
+#hip-integration-request
+</div>
 
-| Channel       | Description                                                                                                                             |
-|---------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| #hip-info     | Stay tuned what happens in HIP! Subscribe to keep informed about:  
-- release notes for new features  
-- planned outages  
-- blog stories                                                             |
-| #hip-help     | Get technical help on HIP integration provided by the community here. Note that the questions asked on this channel are answered by the community and do not contain any SLA terms. |
+<div class="cim-zold">
+  Technical Support
+</div>
+
+<div class="tartalom-vege">
+  Do you have any technical issue in connection with HIP that you weren't able to solve after you consulted our FAQ page or this documentation?<br>
+  Please let us know on Teams
+  <br><br>
+
+  <table class="custom-table">
+    <tr>
+      <td>#hip-info</td>
+      <td>
+        Stay tuned what happens in HIP! Subscribe to keep informed about:
+        <div class="felsorolas">
+        <ul>
+          <li>release notes for new features</li>
+          <li>planned outages</li>
+          <li>blog stories</li>
+        </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>#hip-help</td>
+      <td>
+        Get technical help on HIP integration provided by the community here. Note that the questions asked on this channel are answered by the community and do not contain any SLA terms.
+      </td>
+    </tr>
+  </table>
+
+</div>
 
 
-<div class="my-title2">Organisational Support</div>
+<div class="cim-piros">
+  Organisational Support
+</div>
 
-- Do you need an implementation partner to speed up your project? We are happy to help you to find a suitable partner with HIP know-how.  
-- Do you have problems ensuring the required operation of the interfaces? We can help you build the required structures and provide further solutions.
+<div class="tartalom-vege">
+<div class="felsorolas">
+  <ul>
+    <li>Do you need an implementation partner to speed up your project? We are happy to help you to find a suitable partner with HIP know-how.</li>
+    <li>Do you have problems ensuring the required operation of the interfaces? We can help you build the required structures and provide further solutions.</li>
+  </ul>
+</div><br>
+  Please contact us on Teams:<br><br>
+  <div class="felsorolas">
+  <ul>
+    <li>[#hip-help](https://teams.microsoft.com/l/channel/19%3a9777e02af90640cc9573cb29a1001b79%40thread.tacv2/hip-help?groupId=ca88e69d-414d-4572-8e73-b3e1935075e0&tenantId=82bddc65-9759-44b2-af74-ec76b2e6812a)</li>
+    <li>[#hip-info](https://teams.microsoft.com/l/channel/19%3ae5fe49550fea42afaa7961eef221fd77%40thread.tacv2/hip-info?groupId=ca88e69d-414d-4572-8e73-b3e1935075e0&tenantId=82bddc65-9759-44b2-af74-ec76b2e6812a)</li>
+  </ul>
+</div>
+</div>
 
-Please contact us on Teams:  
-- [#hip-help](https://teams.microsoft.com/l/channel/19%3a9777e02af90640cc9573cb29a1001b79%40thread.tacv2/hip-help?groupId=ca88e69d-414d-4572-8e73-b3e1935075e0&tenantId=82bddc65-9759-44b2-af74-ec76b2e6812a)  
-- [#hip-info](https://teams.microsoft.com/l/channel/19%3ae5fe49550fea42afaa7961eef221fd77%40thread.tacv2/hip-info?groupId=ca88e69d-414d-4572-8e73-b3e1935075e0&tenantId=82bddc65-9759-44b2-af74-ec76b2e6812a)
 
 
-
-**END OF LEARNING PATH**  
-You can close this browser tab.
 
 # Conclusion
 
-<div class="my-title2">Congratulations!</div>
+<div class="my-title1">Congratulations!</div>
+
 
 <div class="full-width-section">
-  ![You are now a HIP **Explorer**!](stock-image.jpg)
-  *You are now a HIP **Explorer**!*  
-  We are glad you took your first steps into the new world of Helvetia Integration Platform with us.
+
+  <img src="stock-image.jpg" alt="You are now a HIP Explorer!" style="width: 100%; height: auto; display: block; height: 300px">
+
+  ---
+
+  <div class="DO-container" style="position: absolute; top: 20%; left: 50%; transform: translateX(-50%); 
+              color: white; text-align: left; 
+              font-size: 2rem; font-weight: bold; padding: 1rem; border-radius: 8px; object-fit: cover">
+      You are now a HIP Explorer!  <br>
+      We are glad you took your first steps into the new world of Helvetia Integration Platform with us.
+  </div>
+
 </div>
 
-<div class="my-title2">Further Learning Paths</div>
+
+
+<div class="my-title1">Further Learning Paths</div>
 
 The learning path you have just completed is not the only learning path at HCP & HIP Academy.  
 In fact, we have an entire competency model!  
-If you would like to continue your education, please take a closer look at the HCP & HIP Role-based Learning Paths matrix.
+If you would like to continue your education, please take a closer look at the HCP & HIP Role-based Learning Paths matrix.<br><br>
 
-
-<div class="my-title2">Heading</div>
-
-You can always find more learning paths on  
-[Learning@Helvetia](https://helvetiasc.plateau.com/learning/user/personal/landOnPortalHome.do?OWASP_CSRFTOKEN=GS3A-R1OG-RKFR-36HI-5TEV-BEU3-00SK-UI9N&fromSF=Y&fromDeepLink=true&pageID=).
-
+You can always find more learning paths on
+<a href="https://helvetiasc.plateau.com/learning/user/personal/landOnPortalHome.do?OWASP_CSRFTOKEN=GS3A-R1OG-RKFR-36HI-5TEV-BEU3-00SK-UI9N&fromSF=Y&fromDeepLink=true&pageID=" 
+   target="_blank" 
+   rel="noopener noreferrer">
+  Learning@Helvetia
+</a>.
 We look forward to welcoming you to one of our other learning paths in the near future.  
-Until then – happy learning!
+Until then – happy learning!<br><br>
 
 
-<div class="my-title2">Your HCP & HIP Academy Team</div>
+Your HCP & HIP Academy Team<br><br>
 
-**E-Mail:** [hcp-and-hip-academy@helvetia.ch](mailto:hcp-and-hip-academy@helvetia.ch)  
-**Slack:** #hcp-and-hip-academy  
+**E-Mail:** 
+<a href="mailto:hcp-and-hip-academy@helvetia.ch">
+  hcp-and-hip-academy@helvetia.ch
+</a>
+
+<br>
+
+**Slack:** #hcp-and-hip-academy
+
+<br>
+
 **Wiki:** [Landing Page](https://wiki.helvetia.group/x/u4rmFw)
 
-
-<div class="my-title2">Feedback</div>
+<br>
 
 Möchtest du uns deine Eindrücke zum HIP Explorer mitteilen?  
 Hilf uns, noch besser zu werden.  
 Lernpfad schnell und direkt per [Feedback-Formular](https://forms.office.com/Pages/ResponsePage.aspx?id=Zdy9glmXskSvdOx2suaBKvO-3741Yu9GrVnFpjUjAbRUQkhRTzdPTjM4RUVDWjFPR0g2TUwwNTZNUCQlQCN0PWcu) bewerten! 🧠🌟
-
 
 ::: continue[COMPLETE]
 Complete the content above before moving on.
